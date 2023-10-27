@@ -22,9 +22,11 @@ function solve(result) {
   for(let j=0; j<puzzleArray.length; j++){
     for (let n = 0; n < puzzleArray[j].length; n++) {
       if(puzzleArray[j][n] == '-'){
-         puzzleArray[j][n] = '0';
+         puzzleArray[j][n] = 0;
       }
+    puzzleArray[j][n]=Number(puzzleArray[j][n])
       }
+
   }  
   return console.table(puzzleArray);
   /**
