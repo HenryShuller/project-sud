@@ -19,6 +19,13 @@ function solve(result) {
   for (let i = 9; i < puzzle.length + 1; i += 9) {
     puzzleArray.push(puzzle.slice(i - 9, i));
   }
+  for(let j=0; j<puzzleArray.length; j++){
+    for (let n = 0; n < puzzleArray[j].length; n++) {
+      if(puzzleArray[j][n] == '-'){
+         puzzleArray[j][n] = '0';
+      }
+      }
+  }  
   return console.table(puzzleArray);
   /**
   /**
