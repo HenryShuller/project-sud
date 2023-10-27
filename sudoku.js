@@ -1,4 +1,12 @@
+const fs = require("fs");
+const text = fs.readFileSync("./puzzles.txt", "utf-8");
+const { EOL } = require("os");
+
 function read() {
+  let sudoku = text.trim().split(`${EOL}`);
+
+  return sudoku.map((el) => el.split(""));
+// function read() {
   /**
    * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
    */
